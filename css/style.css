@@ -1,0 +1,645 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home-btn , .welcome-sections h4 , .welcome-sections a , .welcome-sections p , .featured-title , 
+.welcome-title , .featured-data p , .offer h2 , .offer p , .why-info ul li , .pric1 button , .employee-worker h2 
+, .employee-worker p , .employee-info , .recent-item h3 , .recent-a , .recent-p , .recent-title ,.recent-item h3
+ , .team-info-title , .team-info-sp1 , .team-title{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: "Roboto", serif;
+}
+.home ,  .welcome , .featured , .offer , .why , .pricing , .our-team , .recent{
+    height: 100vh;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* -----------------------header---------------------- */
+.header{
+    position: fixed;
+    background-color: rgb(116, 49, 17, 0.7);
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    text-transform: capitalize;
+}
+.homeicon{
+    font-size: 25px;
+    margin-top: 10px;
+    color: white;
+}
+.header input{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    position: absolute;
+    border: none;
+}
+.searchicon{
+    position: absolute;
+    top: 17px;
+    margin-left: 23px;
+    font-size: 15px;
+}
+.header-links{
+    list-style: none;
+    float: right;
+}
+.header-links li{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.header-links a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    position: relative;
+}
+.header-links li a::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(175, 73, 25);
+    transition: 1s;
+}
+.header-links li a:hover::after{
+    width: 100%;
+    height: 2px;
+}
+/* -----------------------home--------------------- */
+.home{
+    width: 100%;
+    background-image: url(../images/home.jpg);
+    background-size: cover;
+    position: relative;
+}
+.home-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.home-content{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: white;
+}
+.home-title{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.home-p{
+    letter-spacing: 2px;
+    margin-top: 10px;
+    opacity: 0.6;
+    font-size: 20px;
+}
+.home-btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    border:0;
+}
+.home-btn2{
+    background-color: rgb(116, 49, 17);
+    color: white;
+}
+.home-btn:hover{
+    opacity: 0.5;
+}
+/* ---------------------welcome---------------------- */
+.welcome-title , .featured-title , .offer-title , .pricing-title , .team-title , .recent-title{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+}
+.line{
+    margin: auto;
+}
+.line , .why-line{
+    width: 100px;
+    height: 5px;
+    background-color:rgb(116, 49, 17) ;
+    margin-top: 20px;
+}
+.welcome-sections{
+    padding-top: 50px;
+    overflow: auto;
+}
+.section{
+    width: 30%;
+    height: 225px;
+    text-align: center;
+    float: left;
+    border: solid 2px rgb(116, 49, 17);
+    border-radius: 10px;
+    position: relative;
+}
+.sec2{
+    margin: 0px 5%;
+}
+.section::after , .offer1::after , .offer2::after , .offer3::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(116, 49, 17 , 0.6);
+    transition: 1s;
+}
+.section:hover::after , .offer1:hover::after , .offer2:hover::after , .offer3:hover:after , .pric1:hover::after
+, .recent-item:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+.section:hover p{
+    color: black;
+}
+.section:hover{
+    /* color: rgb(116, 49, 17, 0.7); */
+    color: white;
+}
+.welcome-sections i{
+    color: rgb(116, 49, 17);
+    padding-top: 30px;
+    font-size: 30px;
+}
+.welcome-sections h4{
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    padding-top: 20px;
+}
+.welcome-sections p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    color: rgb(0, 0, 0 , 0.6);
+}
+.welcome-sections a{
+    text-decoration: none;
+    color: rgb(116, 49, 17);
+    font-size: 20px;
+}
+/* ----------------------------featured------------------------- */
+.featured{
+    background-color: rgb(245, 222, 179);
+}
+.featured-main{
+    margin-top: 30px;
+    overflow: auto;
+}
+.featured-img1 , .featured-img2 , .featured-img3{
+    width: 30%;
+    height: 200px;
+    float: left;
+    position: relative;
+}
+.featured-img2{
+    margin: 0% 5%;
+}
+.featured-img1 img, .featured-img2 img , .featured-img3 img{
+    width: 100%;
+    height: 100%;
+}
+.featured-data{
+    color: white;
+    background-color: rgb(0, 0, 0 , 0.5);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.featured-data h2{
+    color: rgb(255, 255, 255,0.7);
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.featured-data p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.featured .featured-data i{
+    width: 50px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0 , 0.6);
+    padding-top: 7px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.featured-img1:hover .featured-data , .featured-img2:hover .featured-data ,.featured-img3:hover .featured-data{
+    visibility: visible;
+}
+/* ----------------offer----------------------------- */
+.offer-info{
+    margin-top: 30px;
+    overflow: auto;
+}
+.offer1 , .offer2 , .offer3{
+    width: 300px;
+    height: 200px;
+    border: 1px solid rgb(116, 49, 17);
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-left: 45px;
+    float: left;
+    position: relative;
+}
+.offer1:hover h2, .offer2:hover h2, .offer3:hover h2{
+    color: rgb(116, 49, 17);
+}
+.offer1:hover p , .offer2:hover p, .offer3:hover p{
+    color: black;
+}
+.offer-a{
+    font-size: 25px;
+    color:rgb(116, 49, 17) ;
+    position: absolute;
+    left: 10;
+    top: 20;
+}
+.offer1 p , .offer2 p , .offer3 p{
+    color: rgb(0, 0, 0 , 0.6);
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.offer1{
+    margin-left: 120px;
+}
+.offer2{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/* ----------------------------why--------------------------- */
+.why{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.why-info , .why-img{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.why-title{
+    font-size: 50px;
+    padding-top: 50px;
+}
+.why-info p{
+    color: rgb(0, 0, 0, 0.6);
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.why-info ul li{
+    margin-top: 20px;
+    color: rgb(0, 0, 0, 0.6);
+}
+.why-info ul li i{
+    color: rgb(116, 49, 17);
+}
+.why-img{
+    padding-top: 50px;
+    padding-left: 100px;
+}
+.why-img img{
+    width: 400px;
+    height: 90%;
+}
+.why-img ul{
+    text-align: center;
+    list-style: none;
+}
+.why-img ul li{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.why-ul li.active , .why-img ul li:hover{
+    background-color: rgb(116, 49, 17);
+}
+/* -------------------- icon ---------------------------- */
+.icon-sec{
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/coffee-image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.icon-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.icon-contant{
+    padding-top: 150px;
+    overflow: auto;
+}
+.icon-item1 i{
+    font-size: 40px;
+    color: rgb(245, 222, 179);
+    margin-bottom: 20px;
+}
+.icon-item1 p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.icon-item1{
+    text-align: center;
+    width: 25%;
+    float: left;
+}
+/* ------------------------pricing----------------- */
+.pric1 button , .pric1-pric , .pric1{
+    border: 1px solid rgb(116, 49, 17);
+}
+.pricing-info{
+    overflow: auto;
+}
+.pric1{
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px 15px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 50px;
+    position: relative;
+}
+.pric1::after , .recent-item::after , .team-item::after{
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(116, 49, 17);
+    transition: 1s;
+}
+.pric1:hover .pric1-title{
+    color: rgb(116, 49, 17);
+}
+.pric1:hover .pric1-pric{
+    border-width: 2px;
+}
+.pric1-title{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.pric1-pric{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.pric1-pric h3{
+    font-size: 30px;
+}
+.pricing-p{
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.pric1 button{
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.1)
+}
+/* ----------------------employee------------------------------- */
+.employee{
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/coffee\ shop.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 100px;
+    position: relative;
+}
+.employee-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0 , 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.employee-container{
+    width: 80%;
+    margin: auto;
+}
+.employee-workers{
+    position: relative;
+    width: 45%;
+    float: left;
+    padding-top: 100px;
+    margin-left: 50px;
+}
+.employee-worker{
+    padding-left: 130px;
+    padding-top: 75px;
+}
+.employee-worker img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 160;
+    left: 5;
+}
+.employee-worker h2{
+    color: white;
+    font-size:35px;
+}
+.employee-worker p{
+    color: rgb(212, 99, 47);
+    font-size: 30px;
+}
+.employee-info{
+    margin-top: 30px;
+    color: rgb(245, 222, 179);
+}
+/* -----------------our team-------------------------- */
+.team-item{
+    float: left;
+    padding: 20px 18px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    background-color: rgb(245, 222, 179);
+    margin-top: 50px;
+    position: relative;
+}
+.team-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+.item2{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.team-img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team-img img{
+    width: 100%;
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0 , 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+.team-item:hover .team-overlay{
+    visibility: visible;
+    opacity: 0.7;
+    transition: 1s;
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(116, 49, 17);
+    color: white;
+    font-size: 25px;
+    margin-left: auto;
+}
+.team-overlay a i{
+    line-height: 40px;
+}
+.team-info-title{
+    margin: 10px 0px;
+}
+.team-info-sp1{
+    color: gray;
+}
+/* ------------------------------recent--------------------- */
+.recent{
+    padding-bottom: 30px;
+}
+.recent-content{
+    margin-top: 30px;
+    overflow: auto;
+}
+.recent-item{
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 2px solid rgb(116, 49, 17);
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+}
+.recent-icon p{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.recent-item:hover p{
+    color: rgb(116, 49, 17);
+}
+.recent-item:hover h3{
+    color: white;
+}
+.recent-icon a{
+    color: rgb(116, 49, 17);
+    font-size: 20px;
+}
+.recent-item h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.recent-p{
+    color: rgb(0, 0, 0 , 0.5);
+    margin-bottom: 10px;
+}
+.recent-a{
+    color: rgb(116, 49, 17);
+    text-decoration: none;
+}
+.item22{
+    margin: 0% 5%;
+}
+/* ---------------------footer---------------------- */
+.footer{
+    background-color: rgb(116, 49, 17, 0.6);
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.footer-img{
+    text-align: center;
+}
+.footer-icon{
+    text-align: center;
+}
+.footer-icon i{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(116, 49, 17, 0.7);
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.footer-icon i:hover{
+    background-color: rgb(116, 49, 17);
+}
+.footer p{
+    color: rgb(0, 0, 0 , 0.6);
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
